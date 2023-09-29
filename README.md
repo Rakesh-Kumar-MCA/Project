@@ -1,38 +1,45 @@
 # java_script
 I am Javascript lerner, at present I am a computer Instructor in Upper primary govt. school last 10 year. Now I want to switch my profession teaching to software developer....This is my learnig time.... 
-## Project 1 solution code
 
-...javascript
+## project link
+[Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
+
+# Solution code
+
+## project 1
+
+```javascript
+console.log("hitesh")
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
-buttons.forEach( function (button){
-    button.addEventListener('click',function(e){
-        if (e.target.id === 'gray')
-        {
-            body.style.backgroundColor = e.target.id;
-        }
-        if (e.target.id === 'white') {
-            body.style.backgroundColor = e.target.id;
-          }
-          if (e.target.id === 'blue') {
-            body.style.backgroundColor = e.target.id;
-          }
-          if (e.target.id === 'yellow') {
-            body.style.backgroundColor = e.target.id;
-          }
-
-    });
-
-
+buttons.forEach(function (button) {
+  console.log(button);
+  button.addEventListener('click', function (e) {
+    console.log(e);
+    console.log(e.target);
+    if (e.target.id === 'grey') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'white') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'blue') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'yellow') {
+      body.style.backgroundColor = e.target.id;
+    }
+    
+  });
 });
 
 
-...
+```
 
-## project 2 solution code
+## project 2 solution
 
-...javascript
+```javascript
 const form = document.querySelector('form');
 // this usecase will give you empty
 // const height = parseInt(document.querySelector('#height').value)
@@ -49,25 +56,18 @@ form.addEventListener('submit', function (e) {
   } else if (weight === '' || weight < 0 || isNaN(weight)) {
     results.innerHTML = `Please give a valid weight ${weight}`;
   } else {
-    const bmi = parseInt((weight / ((height * height) / 10000)).toFixed(2));
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
     //show the result
-    if (bmi <= 18.6) {
-    results.innerHTML = `<span> You are under weight ${bmi} </span>`;
-    }else if (bmi > 18.6 && bmi <= 24.9) {
-    results.innerHTML = `<span> You have Normal weight${bmi} </span>`;
-    } else{
-    results.innerHTML = `<span> You are Over weight ${bmi} </span>`;
-    }
-    
+    results.innerHTML = `<span>${bmi}</span>`;
   }
 });
 
-...
+
+```
 
 ## project 3 solution code
 
-...javascript
-
+```javascript
 const clock = document.getElementById('clock');
 // const clock = document.querySelector('#clock')
 
@@ -77,11 +77,13 @@ setInterval(function () {
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
 
-...
 
-## project 4 solution code 
+```
 
-...javascript
+## project 4 solution
+
+
+```javascript
 
 let randomNumber = parseInt(Math.random() * 100 + 1);
 
